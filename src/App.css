@@ -1,0 +1,72 @@
+/* ======================================================
+   App.css – Global polish (safe with Tailwind v4)
+   ====================================================== */
+
+/* Prevent layout overflow */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Improve text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fix anchor scroll offset (for fixed navbar) */
+section {
+  scroll-margin-top: 90px;
+}
+
+/* Remove default link styling */
+a {
+  text-decoration: none;
+}
+
+/* Remove default button outline */
+button {
+  outline: none;
+}
+
+/* Input & textarea polish */
+input,
+textarea {
+  font-family: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8; /* slate-400 */
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(37, 99, 235, 0.35);
+}
+
+/* Simple helper animation (optional use) */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer spacing safety */
+footer {
+  margin-top: 4rem;
+}
